@@ -4,15 +4,14 @@
 sudo apt update
 sudo apt install nodejs npm
 
-nodejs --version
-
-
-curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
-
-
-sudo apt install nodejs
-
 
 node --version
+nodejs --version
 
+cd home/
 
+sudo git clone https://github.com/multiparty/jiff.git
+
+cd jiff
+
+sudo npm install
