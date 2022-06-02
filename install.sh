@@ -8,7 +8,7 @@ sudo apt install nodejs npm
 node --version
 nodejs --version
 
-cd home/
+cd ..
 
 sudo git clone https://github.com/multiparty/jiff.git
 
