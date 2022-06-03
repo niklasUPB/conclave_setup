@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #install npm and node for Jiff
-if [ $1 = "jiff_d" || $1 = "all" ]
+if [ $1 = "jiff_d"  ] || [ $1 = "all" ]
 then
 	sudo apt update
 	sudo apt install nodejs npm
@@ -13,7 +13,7 @@ fi
 
 
 
-if [ $1 = "jiff" || $1 = all ]
+if [ $1 = "jiff" || $1 = "all" ]
 then
 	cd ..
 
