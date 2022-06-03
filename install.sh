@@ -44,6 +44,7 @@ then
 fi
 
 if [$1 = conclave || $1 = all]
+then
 	pip install -r requirements.txt
 
 
