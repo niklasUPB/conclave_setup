@@ -1,17 +1,19 @@
 #!/bin/bash
 
 #install npm and node for Jiff
-if [$1 = jiff_d || $1 = all]
+if [ $1 = "jiff_d" || $1 = "all" ]
 then
 	sudo apt update
 	sudo apt install nodejs npm
+
+	node --version
+	nodejs --version
 fi
 
-node --version
-nodejs --version
 
 
-if [$1 = jiff || $1 = all]
+
+if [ $1 = "jiff" || $1 = all ]
 then
 	cd ..
 
@@ -24,7 +26,7 @@ then
 	cd conclave_setup
 fi
 
-if [$1 = conda|| $1 = all]
+if [ $1 = "conda" || $1 = "all" ]
 then
 	sudo apt install wget
 	cd conda_install
@@ -32,7 +34,7 @@ then
 	cd ..
 fi
 
-if [$1 = cmake|| $1 = all]
+if [ $1 = "cmake" || $1 = "all" ]
 then
 	cd cmake_install
 	sudo tar -xvf cmake-3.23.2.tar.gz
@@ -43,7 +45,7 @@ then
 
 fi
 
-if [$1 = conclave || $1 = all]
+if [ $1 = "conclave" || $1 = "all" ]
 then
 	pip install -r requirements.txt
 
