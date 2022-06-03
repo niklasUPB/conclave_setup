@@ -27,9 +27,29 @@ fi
 if[$1 = conda|| $1 = all]
 then
 	sudo apt install wget
+	cd conda_install
 	bash Anaconda-latest-Linux-x86_64.sh
+	cd ..
+fi
+
+if[$1 = cmake|| $1 = all]
+then
+	cd cmake_install
+	sudo tar -xvf cmake-3.23.2.tar.gz
+	sudo make
+	sudo make install
+	cd ..
+	
 
 fi
+
+if [$1 = conclave || $1 = all]
+	pip install -r requirements.txt
+
+
+fi
+
+
 
 
 
