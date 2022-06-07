@@ -11,12 +11,8 @@ then
 fi
 
 
-
-
 if [ $1 = "jiff" ] || [ $1 = "all" ]
 then
-	
-
 	sudo git clone https://github.com/multiparty/jiff.git
 
 	cd jiff
@@ -32,7 +28,7 @@ then
 	sudo mkdir conda_install
 	cd conda_install
 	sudo wget https://repo.continuum.io/archive/Anaconda3-2022.05-Linux-x86_64.sh
-	bash Anaconda3-2022.05-Linux-x86_64.sh
+	sudo bash Anaconda3-2022.05-Linux-x86_64.sh
 	conda create --name 3.5 python=3.5.6
 	conda activate 3.5
 	cd ..
@@ -45,7 +41,6 @@ then
 	sudo make
 	sudo make install
 	cd ..
-	
 
 fi
 
@@ -59,8 +54,6 @@ then
 	python3 setup.py build
 	python3 setup.py install
 	cd .. 
-
-
 fi
 
 
