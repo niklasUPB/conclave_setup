@@ -29,6 +29,7 @@ fi
 if [ $1 = "conda" ] || [ $1 = "all" ]
 then
 	sudo apt install wget
+	mkdir conda_install
 	cd conda_install
 	wget https://repo.continuum.io/archive/Anaconda3-2022.05-Linux-x86_64.sh
 	bash Anaconda3-2022.05-Linux-x86_64.sh
