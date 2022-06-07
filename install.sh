@@ -46,7 +46,7 @@ fi
 
 if [ $1 = "conclave" ] || [ $1 = "all" ]
 then
-	sudo -s
+	
 	conda activate 3.5
 	sudo git clone https://github.com/multiparty/conclave.git
 	cd conclave
@@ -54,7 +54,7 @@ then
 	python3 setup.py build
 	python3 setup.py install
 	cd .. 
-	exit
+	
 fi
 
 
