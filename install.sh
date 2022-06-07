@@ -7,7 +7,7 @@ then
 	sudo apt install nodejs npm
 
 	node --version
-	nodejs --version
+	npm --version
 fi
 
 
@@ -29,9 +29,9 @@ fi
 if [ $1 = "conda" ] || [ $1 = "all" ]
 then
 	sudo apt install wget
-	mkdir conda_install
+	sudo mkdir conda_install
 	cd conda_install
-	wget https://repo.continuum.io/archive/Anaconda3-2022.05-Linux-x86_64.sh
+	sudo wget https://repo.continuum.io/archive/Anaconda3-2022.05-Linux-x86_64.sh
 	bash Anaconda3-2022.05-Linux-x86_64.sh
 	conda create --name 3.5 python=3.5.6
 	conda activate 3.5
@@ -53,7 +53,7 @@ if [ $1 = "conclave" ] || [ $1 = "all" ]
 then
 	
 	conda activate 3.5
-	https://github.com/multiparty/conclave.git
+	git clone https://github.com/multiparty/conclave.git
 	cd conclave
 	pip install -r requirements.txt
 	python3 setup.py build
@@ -62,6 +62,7 @@ then
 
 
 fi
+
 
 
 
