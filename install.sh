@@ -22,6 +22,10 @@ then
 	
 fi
 
+if [ $1 = "pystache" ] || [ $1 = "all" ]
+	pip install pystache
+fi
+
 if [ $1 = "conda" ] || [ $1 = "all" ]
 then
 	sudo apt install wget

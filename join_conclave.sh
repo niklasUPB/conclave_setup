@@ -39,13 +39,13 @@ then
 fi
 if [ $1 = "1" ]
 then
-	python protocol.py config_one.json	
+	python protocol.py config_1.json	
 fi	
 if [ $1 = "2" ]
 then
-
+	python protocol.py config_2.json
 fi	
 if [ $1 = "2" ]
 then
-	
+	python protocol.py config_3.json
 fi
