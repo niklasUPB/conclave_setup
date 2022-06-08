@@ -29,8 +29,8 @@ then
 	cd conda_install
 	sudo wget https://repo.continuum.io/archive/Anaconda3-2022.05-Linux-x86_64.sh
 	sudo bash Anaconda3-2022.05-Linux-x86_64.sh
-	conda create --name 3.5 python=3.5.6
-	conda activate 3.5
+	#conda create --name 3.5 python=3.5.6
+	#conda activate 3.5
 	cd ..
 fi
 
@@ -46,8 +46,7 @@ fi
 
 if [ $1 = "conclave" ] || [ $1 = "all" ]
 then
-	
-	conda activate 3.5
+	#conda activate 3.5
 	sudo git clone https://github.com/multiparty/conclave.git
 	cd conclave
 	pip install -r requirements.txt
