@@ -19,10 +19,10 @@ then
 		mkdir data2
 	fi
 		
-	if [ -d "./data" ]
+	if [ -d "./data3" ]
 	then
 		rm -r data
-		mkdir data2
+		mkdir data3
 	fi
 
 	mkdir data
@@ -37,15 +37,18 @@ if [ $1 = "server" ]
 then
 	node server.js
 fi
-if [ $1 = "1" ]
+if [ $1 = "eins" ]
 then
-	python protocol.py config_1.json	
+	python protocol.py config_1.json
+	echo "ein"	
 fi	
-if [ $1 = "2" ]
+if [ $1 = "zwei" ]
 then
 	python protocol.py config_2.json
+	echo "zwei"
 fi	
-if [ $1 = "3" ]
+if [ $1 = "drei" ]
 then
 	python protocol.py config_3.json
+	echo "drei"
 fi
