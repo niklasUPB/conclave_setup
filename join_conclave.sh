@@ -8,10 +8,10 @@ python --version
 if [ $1 = "server" ]
 then
 	if [ -d "./data" ]
-	fi
+	then
 		rm -r data
 		mkdir data	
-	then
+	fi
 	if [ -d "./data2" ]
 	then
 		rm -r data
