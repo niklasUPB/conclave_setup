@@ -45,7 +45,7 @@ if [ $1 = "2" ]
 then
 	python protocol.py config_2.json
 fi	
-if [ $1 = "2" ]
+if [ $1 = "3" ]
 then
 	python protocol.py config_3.json
 fi
