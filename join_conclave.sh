@@ -6,7 +6,7 @@ export PYTHONPATH=$PYTHONPATH:/home/conclave_setup/conclave
 python --version
 
 
-if [ $1 = "server" ]
+if [ $1 = "2222" ]
 then
 	if [ -d "./data" ]
 	then
@@ -30,4 +30,22 @@ then
 	mkdir data3
 
 
+fi
+
+
+if [ $1 = "server" ]
+then
+	node server.js
+fi
+if [ $1 = "1" ]
+then
+	python protocol.py config_one.json	
+fi	
+if [ $1 = "2" ]
+then
+
+fi	
+if [ $1 = "2" ]
+then
+	
 fi
