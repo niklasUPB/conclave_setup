@@ -40,15 +40,12 @@ fi
 if [ $1 = "eins" ]
 then
 	python protocol.py config_1.json
-	echo "ein"	
 fi	
 if [ $1 = "zwei" ]
 then
 	python protocol.py config_2.json
-	echo "zwei"
 fi	
 if [ $1 = "drei" ]
 then
 	python protocol.py config_3.json
-	echo "drei"
 fi
