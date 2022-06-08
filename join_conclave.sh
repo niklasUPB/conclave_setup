@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export NODE_PATH=/home/conclave_setup/jiff/node_modules
+echo $NODE_PATH
 export PYTHONPATH=$PYTHONPATH:/home/conclave_setup/conclave
 python --version
 
