@@ -23,6 +23,7 @@ then
 fi
 
 if [ $1 = "pystache" ] || [ $1 = "all" ]
+then
 	pip install pystache
 fi
 
