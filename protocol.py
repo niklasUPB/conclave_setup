@@ -8,25 +8,31 @@ from conclave import workflow
 def protocol():
 
 	cols_in_one = [
-		defCol("car_id", "INTEGER", [1]),
-		defCol("location", "INTEGER", [1])
+		defCol("primary_key", "INTEGER", [1]),
+		defCol("name", "INTEGER", [1]),
+		defCol("grade", "INTEGER", [1]),
+		defCol("birthday", "INTEGER", [1]),
 	]
 	in1 = create("in1", cols_in_one, {1})
 
 	cols_in_two = [
-		defCol("car_id", "INTEGER", [2]),
-		defCol("niklas", "INTEGER", [2])
+		defCol("primary_key", "INTEGER", [2]),
+		defCol("books", "INTEGER", [2]),
+		defCol("age", "INTEGER", [2]),
+		defCol("money", "INTEGER", [2])
 	]
 	in2 = create("in2", cols_in_two, {2})
 
 	cols_in_three = [
-		defCol("car_id", "INTEGER", [3]),
-		defCol("baum", "INTEGER", [3])
+		defCol("primary_key", "INTEGER", [3]),
+		defCol("fun", "INTEGER", [3]),
+		defCol("and", "INTEGER", [3]),
+		defCol("games", "INTEGER", [3])
 	]
 	in3 = create("in3", cols_in_three, {3})
 
-	join1 = join(in1, in2, 'join1', ['car_id'], ['car_id'])
-	join2 = join(join1, in3, 'join2', ['car_id'], ['car_id'])
+	join1 = join(in1, in2, 'join1', ['primary_key'], ['primary_key'])
+	join2 = join(join1, in3, 'join2', ['primary_key'], ['primary_key'])
 	collect(join2, 3)
 
 	return {in1, in2,in3}

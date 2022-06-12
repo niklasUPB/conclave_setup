@@ -6,7 +6,7 @@ export PYTHONPATH=$PYTHONPATH:/home/conclave_setup/conclave
 python --version
 
 
-if [ $1 = "2222" ]
+if [ $1 = "server" ]
 then
 	if [ -d "./data" ]
 	then
@@ -15,19 +15,18 @@ then
 	fi
 	if [ -d "./data2" ]
 	then
-		rm -r data
+		rm -r data2
 		mkdir data2
 	fi
 		
 	if [ -d "./data3" ]
 	then
-		rm -r data
+		rm -r data3
 		mkdir data3
 	fi
 
-	mkdir data
-	mkdir data2
-	mkdir data3
+
+	python3 create_input.py $2 $3 $4 $5
 
 
 fi
