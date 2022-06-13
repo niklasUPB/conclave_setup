@@ -6,7 +6,7 @@ var JIFFServer = require('/home/kali/Desktop/jiff/lib/jiff-server');
 var jiff_instance = new JIFFServer(http, {
   logs: true,
   socketOptions: {
-    pingTimeout: 1000000,
+    pingTimeout: 10000,
     pingInterval: 2000
   }
 });
