@@ -3,6 +3,7 @@
 export NODE_PATH=/home/conclave_setup/jiff/node_modules
 echo $NODE_PATH
 export PYTHONPATH=$PYTHONPATH:/home/conclave_setup/conclave
+export NODE_OPTIONS=--max_old_space_size=4096
 python --version
 
 
