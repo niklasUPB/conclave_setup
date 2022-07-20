@@ -7,7 +7,7 @@ var jiff_instance = new JIFFServer(http, {
   logs: true,
   socketOptions: {
     pingTimeout: 1000000000,
-    pingInterval: 2000
+    pingInterval: 20000
   }
 });
 
