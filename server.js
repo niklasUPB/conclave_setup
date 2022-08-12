@@ -4,11 +4,7 @@ var http = require('http').Server(app);
 
 var JIFFServer = require('/home/conclave_setup/jiff/lib/jiff-server');
 var jiff_instance = new JIFFServer(http, {
-  logs: true,
-  socketOptions: {
-    pingTimeout: 1000000000,
-    pingInterval: 20000
-  }
+  logs: true
 });
 
 var jiffBigNumberServer = require('/home/conclave_setup/jiff/lib/ext/jiff-server-bignumber');
