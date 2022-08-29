@@ -47,5 +47,5 @@ then
 fi	
 if [ $1 = "drei" ]
 then
-	python -m cProfile -o $2 protocol.py config_3.json
+	python protocol.py config_3.json
 fi
