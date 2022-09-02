@@ -23,13 +23,19 @@ def protocol():
 		defCol("money", "INTEGER", [2])
 	]
 	in2 = create("in2", cols_in_two, {2})
-	
+	ols_in_three = [
+		defCol("primary_key", "INTEGER", [3]),
+		defCol("fun", "INTEGER", [3]),
+		defCol("and", "INTEGER", [3]),
+		defCol("games", "INTEGER", [3])
+	]
+	in3 = create("in3", cols_in_three, {3})
 
 	join1 = join(in1, in2, 'join1', ['primary_key'], ['primary_key'])
 	
 	collect(join1, 3)
 
-	return {in1, in2}
+	return {in1, in2,in3}
 
 
 if __name__ == "__main__":
