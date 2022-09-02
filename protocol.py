@@ -23,7 +23,7 @@ def protocol():
 		defCol("money", "INTEGER", [2])
 	]
 	in2 = create("in2", cols_in_two, {2})
-	ols_in_three = [
+	cols_in_three = [
 		defCol("primary_key", "INTEGER", [3]),
 		defCol("fun", "INTEGER", [3]),
 		defCol("and", "INTEGER", [3]),
