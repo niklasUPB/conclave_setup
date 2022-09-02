@@ -6,8 +6,8 @@ var JIFFServer = require('/home/conclave_setup/jiff/lib/jiff-server');
 var jiff_instance = new JIFFServer(http, {
   logs: true,
   socketOptions: {
-    pingTimeout: 2000,
-    pingInterval: 4000
+    pingTimeout: 4000,
+    pingInterval: 8000
   }
 });
 
