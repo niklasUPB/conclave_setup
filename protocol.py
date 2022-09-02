@@ -34,8 +34,8 @@ def protocol():
 	join1 = join(in1, in2, 'join1', ['primary_key'], ['primary_key'])
 	
 	collect(join1, 3)
-	collect(in3,3)
-	return {in1, in2,in3}
+	
+	return {in1, in2}
 
 
 if __name__ == "__main__":
