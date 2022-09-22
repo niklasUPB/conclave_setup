@@ -13,7 +13,7 @@ def protocol():
         defCol("primary_key", "INTEGER", [1]),
         defCol("user_data1_party1", "INTEGER", [1]),
         defCol("user_data2_party1", "INTEGER", [1]),
-        defCol("user_data3_party1", "INTEGER", [1]),
+        defCol("user_data3_party1", "INTEGER", [1])
     ]
     input_1 = create("input_1", columns_in_party1, {1})
 
