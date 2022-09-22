@@ -35,9 +35,9 @@ then
 fi
 if [ $1 = "eins" ]
 then
-	time --output=Results/use_case1_local -a -f='(%Mmax)' python protocol.py config_1_use_case1.json
+	time --output=Results/use_case1_local -a -f='(%Mmax)' python protocol_use_case1.py config_1_use_case1.json
 fi	
 if [ $1 = "zwei" ]
 then
-	time --output=Results/use_case1_local -a -v python protocol.py config_2_use_case1.json
+	time --output=Results/use_case1_local -a -v python protocol_use_case1.py config_2_use_case1.json
 fi	
