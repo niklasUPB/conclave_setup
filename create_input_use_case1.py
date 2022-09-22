@@ -35,7 +35,7 @@ if __name__ == "__main__":
     intersection_size = sys.argv[3];
     write_file("data/input_1.csv", int(party1_row) , int(intersection_size)  , 0 )
     write_file("data2/input_2.csv", int(party2_row) , int(intersection_size) , int(party1_row) )
-    file = open("Results/use_case1_local" , "w")
+    file = open("Results/use_case1_local" , "a")
     writer = csv.writer(file)
     line = []
     line.append(party1_row)
