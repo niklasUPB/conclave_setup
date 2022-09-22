@@ -11,6 +11,12 @@ then
 fi
 
 
+if [ $1 = "time" ] || [ $1 = "all" ]
+then
+	sudo apt-get install time
+	
+fi
+
 if [ $1 = "jiff" ] || [ $1 = "all" ]
 then
 	sudo git clone https://github.com/multiparty/jiff.git
