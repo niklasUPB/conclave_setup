@@ -34,7 +34,6 @@ def protocol():
 
 
 if __name__ == "__main__":
-    
     with open(sys.argv[1], "r") as c:
         c = json.load(c)
     workflow.run(protocol, c, mpc_framework="jiff", apply_optimisations=True)
