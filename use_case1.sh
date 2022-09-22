@@ -23,7 +23,7 @@ then
 		
 
 
-	python3 create_input_use_case1.py $2 $3 $5
+	python3 create_input_use_case1.py $2 $3 $4
 
 
 fi
