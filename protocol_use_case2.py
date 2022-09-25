@@ -25,7 +25,7 @@ def protocol():
 
 
     join_result = join(input_1, input_2, 'join_result', ['primary_key'], ['primary_key'])
-    Filter = cc_filter(join_result ,  "Filter" , "user_data1_party1",  "=="  ,"user_data1_party2" , None )
+    Filter = cc_filter(join_result ,  "Filter" , "user_data1_party1",  "=="  ,"user_data1_party2"  )
     collect(Filter, 1)
     collect(Filter, 2)
 
