@@ -31,7 +31,7 @@ def write_file(name, row, intersection , offset ):
 if __name__ == "__main__":
     party1_row = sys.argv[1];
     party2_row = party1_row
-    intersection_size = party1_row * 0.5 ;
+    intersection_size = int(party1_row) * 0.5 ;
     write_file("data/input_1.csv", int(party1_row) , int(intersection_size)  , 0 )
     write_file("data2/input_2.csv", int(party2_row) , int(intersection_size) , int(party1_row) )
     file = open("Results/use_case2_local" , "a")
