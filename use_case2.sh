@@ -31,13 +31,13 @@ fi
 
 if [ $1 = "server" ]
 then
-	time --output=use_case2_local -a -f='(%Mmax)' node server.js
+	time --output=use_case2_local -a -v node server.js
 fi
 if [ $1 = "eins" ]
 then
-	time --output=use_case2_local -a -f='(%Mmax)' python protocol.py config_1_use_case1.json
+	time --output=use_case2_local -a -v python protocol_use_case2.py config_1_use_case1.json
 fi	
 if [ $1 = "zwei" ]
 then
-	time --output=use_case2_local -a -v python protocol.py config_2_use_case1.json
+	time --output=use_case2_local -a -v python protocol_use_case2.py config_2_use_case1.json
 fi	
