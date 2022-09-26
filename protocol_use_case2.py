@@ -12,24 +12,26 @@ def protocol():
     columns_in_party1 = [
         defCol("primary_key", "INTEGER", [1]),
         defCol("user_data1_party1", "INTEGER", [1])
-
     ]
     input_1 = create("input_1", columns_in_party1, {1})
-
     columns_in_party2 = [
         defCol("primary_key", "INTEGER", [2]),
         defCol("user_data1_party2", "INTEGER", [2])
-
     ]
     input_2 = create("input_2", columns_in_party2, {2})
+    Filter_party1_0 = cc_filter(input_1, "Filter_party1_0", "user_data1_party1", "==", scalar=0)
+    Filter_party2_0 = cc_filter(input_2, "Filter_party2_0", "user_data1_party2", "==", scalar=0)
+    Filter_party1_1 = cc_filter(input_1, "Filter_party1_1", "user_data1_party1", "==", scalar=1)
+    Filter_party2_1 = cc_filter(input_2, "Filter_party2_1", "user_data1_party2", "==", scalar=1)
+    join_result1 = join(Filter_party1_1, Filter_party2_1, 'join_result1', ['primary_key'], ['primary_key'])
+    join_result0 = join(Filter_party1_0, Filter_party2_0, 'join_result0', ['primary_key'], ['primary_key'])
 
+    #final_result = concat([ join_result0 , join_result1 ], "final_result", ["1","2","3"] )
+    collect(join_result0, 1)
+    collect(join_result1, 2)
+    #collect(final_result, 2)
 
-    join_result = join(input_1, input_2, 'join_result', ['primary_key'], ['primary_key'])
-    Filter = cc_filter(join_result ,  "Filter" , "user_data1_party1",  "=="  ,scalar=1  )
-    collect(Filter, 1)
-    collect(Filter, 2)
-
-    return { input_1, input_2 }
+    return { input_1, input_2}
 
 
 if __name__ == "__main__":
