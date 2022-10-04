@@ -14,17 +14,20 @@ def write_half(start,amount, writer):
 def write_file(name, row, intersection , start ):
     file = open(name , "w")
     writer = csv.writer(file)
-
+    abstand = 1
     if name == "data/left.csv":
        writer.writerow([ "a", "b"])
     if name == "data2/left2.csv":
        writer.writerow([ "a", "b"])
+       abstand = 2
     if name == "data/right.csv":
         writer.writerow(["c", "d"])
+        abstand =3
     if name == "data/right2.csv":
         writer.writerow(["c", "d"])
+        abstand =4
     write_half(start,intersection, writer)
-    write_half(row * 10, row-intersection , writer)
+    write_half(row * abstand, row-intersection , writer)
     file.close()
 
 
