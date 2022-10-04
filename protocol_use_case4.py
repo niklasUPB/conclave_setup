@@ -17,8 +17,8 @@ def protocol():
     cols_in_right2 = [defCol("g", "INTEGER", 1,2), defCol("h", "INTEGER", 2)]#yu
     left = create("left", cols_in_left, {1})
     right = create("right", cols_in_right, {2})
-    right2 = create("right2", cols_in_right2, {2})
-    left2 = create("left2", cols_in_left2, {1})
+    right2 = create("right2", cols_in_right2, {1})
+    left2 = create("left2", cols_in_left2, {2})
     first_concat = concat([left, right] ,  "first_concat" , ["a", "test"]  )# a!,b
     second_concat = concat([left2, right2] ,  "second_concat" , ["i" ,"r"]   )#ir
     Join = join( first_concat , second_concat, "Join", ["a"], ["i"] )#ai
