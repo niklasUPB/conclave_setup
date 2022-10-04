@@ -6,9 +6,10 @@ var JIFFServer = require('/home/conclave_setup/jiff/lib/jiff-server');
 var jiff_instance = new JIFFServer(http, {
   logs: true,
 	// 2 mal 500000 ging für 40 mit reconnect.
+	//5000000 ging ganz gut 
   socketOptions: {
-    pingTimeout: 5000000,
-    pingInterval: 5000000
+    pingTimeout: 50000000,
+    pingInterval: 50000000
   }
 });
 
