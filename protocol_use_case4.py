@@ -32,7 +32,7 @@ def protocol():
 def protocol():
     cols_in_left = [defCol("a", "INTEGER", 1,2), defCol("b", "INTEGER", 1)]#ab
     cols_in_right = [defCol("c", "INTEGER",  1,2), defCol("d", "INTEGER", 1)]#cw
-    cols_in_left2 = [defCol("a", "INTEGER", 1,2), defCol("b", "INTEGER", 1)]#ab
+    cols_in_left2 = [defCol("a", "INTEGER", 1,2), defCol("b", "INTEGER", 2)]#ab
     cols_in_right2 = [defCol("c", "INTEGER", 1,2), defCol("d", "INTEGER", 2)]#yu
     left = create("left", cols_in_left, {1})
     right = create("right", cols_in_right, {1})
