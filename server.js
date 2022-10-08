@@ -8,8 +8,8 @@ var jiff_instance = new JIFFServer(http, {
 	// 2 mal 500000 ging für 40 mit reconnect.
 	//5000000 ging ganz gut 
   socketOptions: {
-    pingTimeout: 5000000,
-    pingInterval: 5000000
+    pingTimeout: 500000,
+    pingInterval: 500000
   }
 });
 
