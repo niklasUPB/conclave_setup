@@ -23,5 +23,5 @@ app.use("/home/conclave_setup/jiff/bignumber.js", express.static("node_modules/b
 
 http.listen(9005, function()
 {
-	console.log('listening on *:9005);
+	console.log('listening on *:9005');
 });
