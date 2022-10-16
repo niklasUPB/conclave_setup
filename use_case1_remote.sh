@@ -24,7 +24,7 @@ then
 		
 
 
-	python3 create_input_use_case1.py $2 $3 $4
+	python3 generate_input_use_case1_remote.py $2 $3 $4
 
 
 fi
